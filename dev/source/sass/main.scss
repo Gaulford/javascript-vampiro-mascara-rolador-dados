@@ -1,0 +1,212 @@
+﻿// Compass Reset
+@import
+    'compass',
+    'compass/reset';
+
+// Compass Sprite Generator
+// $sprite-layout: smart;
+// $sprite-spacing: 5px;
+// $sprite-dimensions: true;
+// @import "sprite/*.png";
+
+// Imports Utils Itens
+@import
+	'utils/fonts',
+	'utils/functions',
+	'utils/variables';
+
+// Estilos gerais
+body {
+	margin: 20px;
+	background: #333333 image-url("bg.jpg") repeat scroll 0 0;
+	font-family: Trebuchet MS;
+	@include font-size(15);
+	color: #ffffff;
+}
+
+// Alinhamento do conteúdo principal
+.container {
+	width: 990px;
+	margin: 0 auto;
+
+	h1 {
+		margin-bottom: 15px;
+		font-family: Impact;
+		@include font-size(30);
+		text-align: center;
+	}
+
+	h2 {
+		margin: 40px 0 15px;
+		font-family: Impact;
+		@include font-size(25);	
+		text-align: center;
+	}
+}
+
+.rolagem-dados {
+	overflow: hidden;
+
+	> fieldset {
+		margin: 15px 0;
+	}
+}
+
+.grid-two-blocks {
+	overflow: hidden;
+
+	> * {
+		width: 47%;
+		float: right;
+
+		&:first-child {
+			float: left;
+		}
+	}
+
+	input[type="text"] {
+		width: 44.8%;
+	}
+}
+
+.grid-three-blocks {
+	> * {
+		float: left;
+		width: 30%;
+		margin-left: 23px;
+
+		&:first-child {
+			margin: 0;
+		}
+	}
+
+	input {
+		width: 30%;
+	}
+}
+
+.cp-input-black {
+	padding: 10px;
+	border-radius: 4px;
+	border: 1px solid rgba(0,0,0,0.4);
+	background: rgba(255,255,255,0.04);
+	outline: 0;
+	
+	-moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.06),0 1px 1px rgba(0,0,0,0.04);
+	-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.06),0 1px 1px rgba(0,0,0,0.04);
+	box-shadow: inset 0 1px 0 rgba(255,255,255,0.06),0 1px 1px rgba(0,0,0,0.04);
+
+	color: #ffffff;
+	text-shadow: 0 1px 0 rgba(0,0,0,0.8);
+
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+
+	&:focus {
+		background: rgba(255,255,255,0.06);
+		box-shadow: inset 0 1px 3px rgba(255,255,255,0.08),0 1px 5px rgba(0,0,0,0.2);
+		color: #ffffff;
+	}
+
+	option {
+		border-bottom: 1px solid rgba(0,0,0,0.4);
+		color: #333333;
+	}
+}
+
+.cp-btn-red {
+	&.error {
+		display: none;
+	}
+
+	padding: 8px 16px;
+	font-size: 13px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 14px;
+	color: #3d0800;
+	text-shadow: 0 1px 0 rgba(255,255,255,0.15);
+	cursor: pointer;
+	
+	background-color: #b52e19;
+	background-image: -webkit-linear-gradient(top,rgba(255,255,255,0.08),rgba(0,0,0,0.2));
+	background-image: -moz-linear-gradient(top,rgba(255,255,255,0.08),rgba(0,0,0,0.2));
+
+	border: none;
+	border-radius: 4px;
+	box-shadow: inset 0 1px 0 rgba(255,255,255,0.16),0 1px 1px rgba(0,0,0,0.4);
+	
+	-webkit-transition: box-shadow 0.3s ease;
+	-moz-transition: box-shadow 0.3s ease;
+	-o-transition: box-shadow 0.3s ease;
+
+	&:hover {
+		box-shadow: inset 0 0 10px rgba(255,255,255,0.3),inset 0 1px 0 rgba(255,255,255,0.1),0 1px 2px rgba(0,0,0,0.4);
+	}
+
+	&:active {
+		box-shadow: inset 0 0 1px black,0 1px 0 rgba(0,0,0,0.4);
+	}
+}
+
+.cp-radio {
+	.cp-btn-red {
+		margin-right: 10px;
+		display: inline-block
+	}
+
+	input[type="radio"] {
+		display: none
+	}
+}
+
+.lista-resultados {
+	background: rgba(0,0,0,0.2);
+	box-shadow: 0 1px 0 rgba(255,255,255,0.08),0 -1px 1px rgba(255,255,255,0.05);
+	border: 1px solid rgba(0,0,0,0.3);
+	border-radius: 4px;
+	overflow: hidden;
+
+	li {
+		width: 46.70%;
+		padding: 10px 15px;
+		float: left;
+
+		border: 1px solid rgba(0,0,0,0.4);
+		box-shadow: inset 0 1px 0 rgba(255,255,255,0.04);
+		background-image: -webkit-linear-gradient(top,rgba(255,255,255,0.014),rgba(0,0,0,0.02));
+		background-image: -moz-linear-gradient(top,rgba(255,255,255,0.014),rgba(0,0,0,0.02));
+	}
+
+	p {
+		color: #999999;
+		line-height: 1.4;
+		text-shadow: 0 1px 0 #000;
+	}
+
+	> p {
+		margin: 15px;
+		text-align: center;
+	}
+
+	strong {
+		font-weight: bold;
+	}
+
+	em {
+		font-style: italic;
+	}
+}
+
+.cp-font-blue {
+	color: #295eb3;
+}
+
+.cp-font-red {
+	color: #b52e19;
+}
+
+.cp-font-white {
+	color: #ffffff;
+}
